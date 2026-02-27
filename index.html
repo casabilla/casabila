@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityBrew · coffee shop</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+
+        <!-- Background machine image -->
+        <div class="bg-machine"></div>
+
+        <!-- Brown rectangle with coffee shop title -->
+        <div class="title-rect"></div>
+        <div class="coffee-title">
+            <span class="coffee-word">coffee</span>
+            <span class="shop-word">shop</span>
+        </div>
+
+        <!-- Taglines -->
+        <div class="rhythm">Your rhythm.</div>
+        <div class="taste">Our taste.</div>
+
+        <!-- Menu button -->
+        <div class="menu-bg"></div>
+        <div class="menu-text">menu</div>
+
+        <!-- Menu button with link -->
+<a href="menu.html" class="menu-link">
+    <div class="menu-bg"></div>
+    <div class="menu-text">menu</div>
+</a>
+
+        <!-- Beige stripe -->
+        <div class="stripe-beige"></div>
+
+        <!-- Coffee beans headline -->
+        <div class="beans-headline">coffee beans we use</div>
+
+        <!-- Hidden radio buttons for interaction -->
+        <input type="radio" name="bean" id="liberica-toggle" class="bean-toggle" hidden>
+        <input type="radio" name="bean" id="excelsa-toggle" class="bean-toggle" hidden>
+        <input type="radio" name="bean" id="robusta-toggle" class="bean-toggle" hidden>
+        <input type="radio" name="bean" id="arabica-toggle" class="bean-toggle" hidden>
+
+        <!-- Bean cards container -->
+        <div class="beans-container">
+            <!-- Liberica -->
+            <label for="liberica-toggle" class="bean-group liberica-group">
+                <div class="bean-bg liberica-bg"></div>
+                <div class="bean-label">liberica</div>
+            </label>
+            <!-- Excelsa -->
+            <label for="excelsa-toggle" class="bean-group excelsa-group">
+                <div class="bean-bg excelsa-bg"></div>
+                <div class="bean-label">excelsa</div>
+            </label>
+            <!-- Robusta -->
+            <label for="robusta-toggle" class="bean-group robusta-group">
+                <div class="bean-bg robusta-bg"></div>
+                <div class="bean-label">robusta</div>
+            </label>
+            <!-- Arabica -->
+            <label for="arabica-toggle" class="bean-group arabica-group">
+                <div class="bean-bg arabica-bg"></div>
+                <div class="bean-label">arabica</div>
+            </label>
+        </div>
+
+        <!-- Bottom beans image -->
+        <div class="bottom-beans-img"></div>
+
+       <!-- Description overlays (will be shown via JS) -->
+<div class="bean-description liberica-desc" id="liberica-desc">
+    <div class="desc-content">
+        <div class="desc-text">
+            One of the hardest types of coffee bean to come by is the Liberica bean. They are larger than the other beans and is the only one in the world that is known to have an irregular shape. Liberica beans are also unique in their aroma and some say that they are not only smoky, but they are fruity and floral too.
+        </div>
+        <button class="close-btn" data-bean="liberica">✕ close</button>
+    </div>
+</div>
+
+<div class="bean-description excelsa-desc" id="excelsa-desc">
+    <div class="desc-content">
+        <div class="desc-text">
+            Excelsa beans grow on large trees at medium altitudes. They have a distinctive tart, fruity profile and are often used in blends to add complexity.
+        </div>
+        <button class="close-btn" data-bean="excelsa">✕ close</button>
+    </div>
+</div>
+
+<div class="bean-description robusta-desc" id="robusta-desc">
+    <div class="desc-content">
+        <div class="desc-text">
+            Robusta beans are hardy, high in caffeine, and produce a strong, earthy flavour with peanut notes. Essential for authentic Italian espresso blends.
+        </div>
+        <button class="close-btn" data-bean="robusta">✕ close</button>
+    </div>
+</div>
+
+<div class="bean-description arabica-desc" id="arabica-desc">
+    <div class="desc-content">
+        <div class="desc-text">
+            Arabica is the most popular bean, known for its smooth, sweet acidity and complex flavours like chocolate, fruit and berries. Grown at high altitudes.
+        </div>
+        <button class="close-btn" data-bean="arabica">✕ close</button>
+    </div>
+</div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

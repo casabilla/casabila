@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1a16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-page {
+    width: 1280px;
+    height: 890px;
+    background-color: #ECE0D1;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Back arrow - left side, exactly middle */
+.back-arrow {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 64px;
+    color: #38220F;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    z-index: 30;
+    line-height: 1;
+}
+
+.back-arrow:hover {
+    transform: translateY(-50%) translateX(-5px);
+}
+
+/* Menu title - centered at top */
+.menu-title {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 100;
+    color: #38220F;
+    z-index: 25;
+}
+
+/* Thin line across the page */
+.menu-line {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #38220F;
+    opacity: 0.3;
+    z-index: 20;
+}
+
+/* Menu items container */
+.menu-items {
+    position: absolute;
+    top: 130px;
+    left: 250px;
+    right: 20px;
+    width: auto;
+    z-index: 15;
+}
+
+/* Individual menu item */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+.item-left {
+    display: flex;
+    align-items: baseline;
+    gap: 0px;                /* одинаковое расстояние между названием и описанием для всех */
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    flex: 1;                  /* занимает все доступное место */
+}
+
+.item-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 100;
+    color: #38220F;
+    white-space: nowrap;
+    display: inline-block;
+    /* Убираем min-width и используем точный отступ после названия */
+}
+
+/* Создаем одинаковый отступ после каждого названия */
+.item-name::after {
+    content: '';
+    display: inline-block;
+    width: 60px;              /* фиксированный отступ после названия */
+    opacity: 0;
+}
+
+.item-desc {
+    font-family: 'Playfair Display', serif;
+    font-size: 21.14px;
+    color: #38220F;
+    opacity: 0.8;
+    white-space: nowrap;
+    max-width: none;
+    flex-shrink: 0;           /* не сжимается */
+}
+
+.item-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 100;
+    color: #38220F;
+    text-align: right;
+    min-width: 100px;
+    white-space: nowrap;
+    margin-left: 30px;
+    flex-shrink: 0;           /* не сжимается */
+}
+
+/* Убираем все специальные стили для последней цены */
+.menu-item:last-child .item-price {
+    text-shadow: none;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    position: static;
+}
+
+/* Bottom right image - exactly in the corner, no margins */
+.menu-image {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 800px;
+    height: 533px;
+    background-image: url('image-from-rawpixel-id-13094357-png.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    opacity: 0.9;
+    pointer-events: none;
+}
