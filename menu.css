@@ -70,7 +70,7 @@ body {
 .menu-items {
     position: absolute;
     top: 130px;
-    left: 250px;
+    left: 125px;
     right: 20px;
     width: auto;
     z-index: 15;
@@ -160,3 +160,4 @@ body {
     opacity: 0.9;
     pointer-events: none;
 }
+
